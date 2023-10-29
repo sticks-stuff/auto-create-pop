@@ -1,4 +1,4 @@
-function FindReact(dom, traverseUp = 0) { //https://stackoverflow.com/a/39165137
+function FindReact(dom, traverseUp = 0) { // https://stackoverflow.com/a/39165137
     const key = Object.keys(dom).find(key=>{
         return key.startsWith("__reactFiber$") // react 17+
             || key.startsWith("__reactInternalInstance$"); // react <17
@@ -32,7 +32,7 @@ function FindReact(dom, traverseUp = 0) { //https://stackoverflow.com/a/39165137
 }
 
 
-function waitForElm(selector) {
+function waitForElm(selector) { // https://stackoverflow.com/a/61511955
     return new Promise(resolve => {
         if (document.querySelector(selector)) {
             return resolve(document.querySelector(selector));
