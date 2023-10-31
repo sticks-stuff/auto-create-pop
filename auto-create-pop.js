@@ -1,4 +1,4 @@
-function FindReact(dom, traverseUp = 0) { // https://stackoverflow.com/a/39165137
+function FindReact(dom, traverseUp = 0) { //https://stackoverflow.com/a/39165137
     const key = Object.keys(dom).find(key=>{
         return key.startsWith("__reactFiber$") // react 17+
             || key.startsWith("__reactInternalInstance$"); // react <17
@@ -95,6 +95,48 @@ waitForElm('.Select--single:not(.is-loading)').then((elm) => {
 	document.querySelectorAll('[name="startAt"]')[0].required = false; // even after its disappeared its technically still in the input and it will submit successfully. removing the 'required' flag allows us to submit the form without the browser stopping us
 	document.querySelectorAll('[name="endAt"]')[0].value = endAt.format("MM/DD/yyyy hh:mm a");	
 	document.querySelectorAll('[name="endAt"]')[0].required = false;
+});
+
+waitForElm('.tournamentAdminProfile').then((elm) => {
+	fetch("https://www.start.gg/api/-/gql", {
+		"headers": {
+			"client-version": "20"
+		},
+		"body": `
+		[
+			{
+				"operationName":"TournamentPageHead",
+				"variables":{
+					"slug":"${window.location.href.split("https://www.start.gg/admin/tournament/")[1].split("/")[0]}"
+				},
+				"query":"query TournamentPageHead($slug: String!) { tournament(slug: $slug) { ...tournamentPageHead } } fragment tournamentPageHead on Tournament { id }"
+			}
+		]`,
+		"method": "POST",
+		"mode": "cors"
+	}).then(response => response.json()).then((json) => {
+		fetch("https://www.start.gg/api/-/gql", {
+			"headers": {
+				"client-version": "20"
+			},
+			"body": `
+			[
+				{
+					"operationName":"UpdateBasicDetailsTournament",
+					"variables":{
+						"tournamentId":${json[0].data.tournament.id},
+						"fields":{
+							"shortSlug":"pop${numOfPoP}"
+						},
+						"validationKey":"updateTournament"
+					},
+					"query": "mutation UpdateBasicDetailsTournament($tournamentId: ID!, $fields: UpdateBasicFieldsTournament!) { updateBasicFieldsTournament(tournamentId: $tournamentId, fields: $fields) {id ...detailsSettings } } fragment detailsSettings on Tournament { shortSlug }"
+				}
+			]`,
+			"method": "POST",
+			"mode": "cors"
+		});
+	});
 });
 
 console.log(`
