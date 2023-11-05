@@ -144,7 +144,7 @@ __**Pōneke Popoff #${numOfPoP}**__
 
 Welcome back to another Pōneke Popoff! We'll be running Ulti and ${sidegame}, either round robin or double elim depending on numbers, as well as plenty of friendlies.
 
-When: ${startAt.format("dddd, MMMM Do")} (this week!), friendlies from 5.30PM, bracket starts 6pm
+When: ${startAt.format("dddd, MMMM Do")} (<t:${startAt.unix()}:R>!), friendlies from 5.30PM, bracket starts 6pm
 Where: Respawn Esports Centre, 9 Manners Street
 Entry fee: $10, pay at venue, cash or eftpos
 
