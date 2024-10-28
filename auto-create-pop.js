@@ -70,7 +70,7 @@ var numOfPoP = Math.floor(moment.duration(startAt.diff(startofPoP)).asWeeks());
 numOfPoP -= 8; //offset
 
 const isEven = num => num % 2 === 0; // lol
-var sidegame = isEven(numOfPoP) ? "P+" : "Melee"
+var sidegame = isEven(numOfPoP) ? "Melee" : "P+"
 
 FindReact(document.querySelectorAll('[name="name"]')[0].parentElement.parentElement.parentElement).changeValue("Pōneke Popoff #" + numOfPoP)
 
@@ -87,7 +87,7 @@ document.getElementsByClassName("sgg1USfM")[0].children[0].children[0].click(); 
 waitForElm('.Select--single:not(.is-loading)').then((elm) => {
 	var prevTournaments = document.getElementsByClassName("Select--single")[0]; // this sucks
 	var options = FindReact(prevTournaments).props.options;
-	var prevEventWithSameSidegame = options.find(o => o.label.match("Popoff #" + (numOfPoP - 3)));
+	var prevEventWithSameSidegame = options.find(o => o.label.match("Popoff #" + (numOfPoP - 2)));
 	
 	FindReact(prevTournaments).setValue(prevEventWithSameSidegame);
 	
