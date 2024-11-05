@@ -70,7 +70,7 @@ var numOfPoP = Math.floor(moment.duration(startAt.diff(startofPoP)).asWeeks());
 numOfPoP -= 8; //offset
 
 const isEven = num => num % 2 === 0; // lol
-var sidegame = isEven(numOfPoP) ? "Melee" : "P+"
+var sidegame = isEven(numOfPoP) ? "Ulti and Melee" : "RoA 2 and P+"
 
 FindReact(document.querySelectorAll('[name="name"]')[0].parentElement.parentElement.parentElement).changeValue("Pōneke Popoff #" + numOfPoP)
 
@@ -142,13 +142,13 @@ waitForElm('.tournamentAdminProfile').then((elm) => {
 console.log(`
 __**Pōneke Popoff #${numOfPoP}**__
 
-Welcome back to another Pōneke Popoff! We'll be running Ulti and ${sidegame}, either round robin or double elim depending on numbers, as well as plenty of friendlies.
+Welcome back to another Pōneke Popoff! We'll be running ${sidegame}, as well as plenty of friendlies.
 
-When: ${startAt.format("dddd, MMMM Do")} (<t:${startAt.unix()}:R>!), friendlies from 5.30PM, bracket starts 6pm
+When: ${startAt.format("dddd, MMMM Do")} (<t:${startAt.unix()}:R>!), friendlies from 5:30PM, bracket starts 6:00PM
 Where: Respawn Esports Centre, 9 Manners Street
 Entry fee: $10, pay at venue, cash or eftpos
 
-Please bring a controller if you can, and extra setups are always nice. If you need to borrow a controller there are usually a few available.
+Please bring a controller if you can, and extra setups are always nice! If you need to borrow a controller there are usually a few available.
 
 Bracket link:
 https://start.gg/pop${numOfPoP}
