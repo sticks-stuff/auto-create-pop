@@ -67,7 +67,7 @@ var endAt = moment(d).set("hour", 21).set("minute", 0).set("second", 0); //9pm
 
 var startofPoP = moment("24-08-2022", "DD-MM-YYYY");
 var numOfPoP = Math.floor(moment.duration(startAt.diff(startofPoP)).asWeeks());
-numOfPoP -= 8; //offset
+numOfPoP -= 10; //offset
 
 const isEven = num => num % 2 === 0; // lol
 var sidegame = isEven(numOfPoP) ? "Ulti and Melee" : "RoA 2 and P+"
