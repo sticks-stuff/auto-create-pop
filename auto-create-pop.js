@@ -70,7 +70,7 @@ var numOfPoP = Math.floor(moment.duration(startAt.diff(startofPoP)).asWeeks());
 numOfPoP -= 10; //offset
 
 const isEven = num => num % 2 === 0; // lol
-var sidegame = isEven(numOfPoP) ? "Ulti and Melee" : "RoA 2 and P+"
+var sidegame = isEven(numOfPoP) ? "Melee" : "P+"
 
 FindReact(document.querySelectorAll('[name="name"]')[0].parentElement.parentElement.parentElement).changeValue("Pōneke Popoff #" + numOfPoP)
 
@@ -142,7 +142,7 @@ waitForElm('.tournamentAdminProfile').then((elm) => {
 console.log(`
 __**Pōneke Popoff #${numOfPoP}**__
 
-Welcome back to another Pōneke Popoff! We'll be running ${sidegame}, as well as plenty of friendlies.
+Welcome back to another Pōneke Popoff! We'll be running Ulti, Rivals 2, and a Single Elim ${sidegame} bracket, as well as plenty of friendlies.
 
 When: ${startAt.format("dddd, MMMM Do")} (<t:${startAt.unix()}:R>!), friendlies from 5:30PM, bracket starts 6:00PM
 Where: Respawn Esports Centre, 9 Manners Street
