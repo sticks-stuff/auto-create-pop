@@ -60,7 +60,7 @@ fetch('https://momentjs.com/downloads/moment.min.js')
 
 let d = new Date(); // https://stackoverflow.com/a/33078673
 d.setDate(d.getDate() + (((3 + 7 - d.getDay()) % 7) || 7)); // get next wednesday. will return the following wednesday even if its currently a wednesday
-// d.setDate(d.getDate() + (((1 + 7 - d.getDay()) % 7) || 7)); // uncomment this if you want to return the current date if already a wednesday 
+// d.setDate(d.getDate() + (((d.getDay()) - 3 % 7))); // uncomment this if you want to return the current date if already a wednesday 
 
 var startAt = moment(d).set("hour", 18).set("minute", 0).set("second", 0); //6pm
 var endAt = moment(d).set("hour", 21).set("minute", 0).set("second", 0); //9pm
