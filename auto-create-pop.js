@@ -67,10 +67,10 @@ var endAt = moment(d).set("hour", 21).set("minute", 0).set("second", 0); //9pm
 
 var startofPoP = moment("24-08-2022", "DD-MM-YYYY");
 var numOfPoP = Math.floor(moment.duration(startAt.diff(startofPoP)).asWeeks());
-numOfPoP -= 12; //offset
+numOfPoP -= 11; //offset
 
 const isEven = num => num % 2 === 0; // lol
-var sidegame = isEven(numOfPoP) ? "RoA 2 and Melee" : "Ulti and P+"
+var sidegame = isEven(numOfPoP) ? "Ulti and P+" : "RoA 2 and Melee"
 
 FindReact(document.querySelectorAll('[name="name"]')[0].parentElement.parentElement.parentElement).changeValue("Pōneke Popoff #" + numOfPoP)
 
@@ -87,7 +87,7 @@ document.getElementsByClassName("sgg1USfM")[0].children[0].children[0].click(); 
 waitForElm('.Select--single:not(.is-loading)').then((elm) => {
 	var prevTournaments = document.getElementsByClassName("Select--single")[0]; // this sucks
 	var options = FindReact(prevTournaments).props.options;
-	var prevEventWithSameSidegame = options.find(o => o.label.match("Popoff #" + (numOfPoP - 2)));
+	var prevEventWithSameSidegame = options.find(o => o.label.match("Popoff #" + (numOfPoP - 3)));
 	
 	FindReact(prevTournaments).setValue(prevEventWithSameSidegame);
 	
