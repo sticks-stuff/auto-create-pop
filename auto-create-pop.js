@@ -87,7 +87,7 @@ document.getElementsByClassName("sgg1USfM")[0].children[0].children[0].click(); 
 waitForElm('.Select--single:not(.is-loading)').then((elm) => {
 	var prevTournaments = document.getElementsByClassName("Select--single")[0]; // this sucks
 	var options = FindReact(prevTournaments).props.options;
-	var prevEventWithSameSidegame = options.find(o => o.label.match("Popoff #" + (numOfPoP - 3)));
+	var prevEventWithSameSidegame = options.find(o => o.label.match("Popoff #" + (numOfPoP - 5)));
 	
 	FindReact(prevTournaments).setValue(prevEventWithSameSidegame);
 	
