@@ -68,7 +68,7 @@ var endAt = moment(d).set("hour", 19).set("minute", 0).set("second", 0); //7pm
 var startofResplat = moment("18-07-2021", "DD-MM-YYYY");
 var numOfResplat = Math.floor(moment.duration(startAt.diff(startofResplat)).asWeeks());
 numOfResplat = Math.floor(numOfResplat / 2); // fortnightly
-numOfResplat -= 9; //offset
+numOfResplat -= 8; //offset
 
 FindReact(document.querySelectorAll('[name="name"]')[0].parentElement.parentElement.parentElement).changeValue("Respawn Platform " + numOfResplat + " - " + startAt.format("DD/MM/YYYY"));
 
