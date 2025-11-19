@@ -138,20 +138,17 @@ waitForElm('.tournamentAdminProfile').then((elm) => {
 });
 
 console.log(`
-
 **__Respawn Platform ${numOfResplat} - ${startAt.format("DD/MM/YYYY")}__**
 
 Where: 9 Manners Street, Te Aro, Wellington.
 
 Schedule: 
-12:00pm - Guilty Gear: Strive, Rivals of Aether
-12:30pm -  Street Fighter 6, Project +
-2:00pm - Super Smash Bros. Ultimate, Tekken 8
+12:00pm - Rivals of Aether, Guilty Gear: Strive
+12:30pm - Project +, Street Fighter 6
+2:00pm - Super Smash Bros. Ultimate, 2XKO
 3:30pm - Rivals of Aether II
 
-Respawn Platform is Wellington's Super Smash Bros. Ultimate biweekly tournament series, featuring a singles bracket, Rivals of Aether I & II singles and Project+ singles. 
-
-We also have fighting game brackets for the three biggest traditional fighting games in Wellington, Guilty Gear Strive, Street FIghter 6 and Tekken 8.
+Respawn Platform is Wellington's biweekly platform fighter tournament series, featuring Super Smash Bros. Ultimate, Rivals of Aether II, P+, and other brackets! $10 venue fee, pay on site.
 
 $10 entry fee, pay on site.
 
