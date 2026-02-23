@@ -82,7 +82,7 @@ FindReact(inputFields[1].children[0]).changeValue("https://discord.gg/4sP2weDDHm
 FindReact(inputFields[2].children[0]).changeValue(startAt);
 FindReact(inputFields[3].children[0]).changeValue(endAt);
 
-document.getElementsByClassName("sgg1USfM")[0].children[0].children[0].click(); // this sucks
+document.getElementsByClassName("copySection-sgg-6rfu")[0].children[0].children[0].click(); // this sucks
 
 waitForElm('.Select--single:not(.is-loading)').then((elm) => {
 	var prevTournaments = document.getElementsByClassName("Select--single")[0]; // this sucks
