@@ -74,7 +74,7 @@ FindReact(document.querySelectorAll('[name="name"]')[0].parentElement.parentElem
 
 inputFields = document.getElementsByClassName("mui-dzz0xc"); // this sucks
 
-FindReact(inputFields[0].children[0]).changeValue("discord");
+FindReact(inputFields[0].children[0].children[0]).changeValue("discord");
 FindReact(inputFields[1].children[0]).changeValue("https://discord.gg/4sP2weDDHm");
 
 FindReact(inputFields[2].children[0]).changeValue(startAt);
